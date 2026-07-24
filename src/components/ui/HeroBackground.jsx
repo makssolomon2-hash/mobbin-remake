@@ -8,7 +8,8 @@ const BASE_OPACITY = 0.13;
 const MAX_OPACITY = 0.65;
 const MAX_PUSH = 10;
 const LERP_SPEED = 0.075;
-const DOT_COLOR = '0, 82, 255';
+/* const DOT_COLOR = '0, 82, 255'; */
+const DOT_COLOR = '59, 130, 246';
 
 export default function HeroBackground() {
   const canvasRef = useRef(null);

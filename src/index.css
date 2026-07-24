@@ -14,9 +14,13 @@
 
 body {
   margin: 0;
-  background-color: #16171d;
+  background-color: #ffffff;
   color: var(--text);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.navbar a{
+  cursor: pointer;
 }
 
 #root {

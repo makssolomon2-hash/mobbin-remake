@@ -9,6 +9,9 @@ lerna-debug.log*
 
 node_modules
 dist
+
+# Large assets
+src/assets/video/
 dist-ssr
 *.local
 

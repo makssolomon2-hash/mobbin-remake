@@ -1,18 +1,44 @@
 import React from 'react';
 import HeroBackground from './ui/HeroBackground';
+import NavBar from './ui/NavBar';
 
-const Hero = ({ children }) => {
+import logos from "../assets/asset3.png";
+
+import teams from "./ui/teams.png"
+
+const Hero = () => {
   return (
-    <section
-      style={{
-        position: 'relative',
-        width: '100%',
-        height: '100vh',
-        overflow: 'hidden',
-      }}
-    >
-      <HeroBackground />
-      {children}
+    <section className="relative w-full h-screen center overflow-hidden">
+      <HeroBackground className="" />
+
+      {/* Everything here sits above the background */}
+      <div className="relative z-10 flex flex-col w-full h-full">
+        <NavBar/>
+        <section className="relative h-screen p-5 w-full flex items-center justify-center">
+          <div className="hero-container text-center m-10">
+            <div className="flex justify-center mb-4">
+              <img src={logos} alt="" className="w-30 h-30 mt-30" /> {/* Create LogoCarousel.jsx in ui with GSAP */}
+            </div>
+
+            <h1 className="text-8xl font-bold text-black mt-10 ">Discover real-world design inspiration.</h1>
+            <p className="text-2xl m-3 text-gray-500">
+              Featuring over 1,000 iOS & Web apps, and 200 sites —New content weekly.
+            </p>
+
+            <button className="rounded-full  m-5 p-3 px-7  bg-black text-white text-2xl font-medium cursor-pointer">Join for free</button>
+            <button className="rounded-full p-3 px-7  bg-white text-black border-1 text-2xl font-medium cursor-pointer">See our plans →</button>
+
+            <p className="mt-20">Trusted by design teams at</p>
+            <div className="teams-logos text-center flex items-center justify-center mt-10 ">
+              <img src={teams} alt="" ></img>
+              <img src={''} alt=""></img>
+              <img src={''} alt=""></img>
+              <img src={''} alt=""></img>
+              <img src={''} alt=""></img>
+            </div>
+          </div>
+        </section>
+      </div>
     </section>
   );
 };

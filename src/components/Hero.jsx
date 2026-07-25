@@ -5,12 +5,12 @@ import teams from "./ui/teams.png"
 
 const Hero = () => {
   return (
-    <section className="relative    w-full h-screen center overflow-hidden xl:-mt-0 ">
+    <section className="relative   w-full h-screen center overflow-hidden xl:-mt-0 ">
       {/* Everything here sits above the background */}
       <div className="relative z-10 flex flex-col w-full h-full">
        {/*  <NavBar /> */}
         <section className="relative top-10 h-screen p-5 w-full flex items-center justify-center -z-1">
-          <div className="hero-container w-[950px] text-center m-10">
+          <div className="hero-container 2k:-mt-80 w-[950px] text-center m-10">
             <div className="flex justify-center mb-4">
               <img src={logos} alt="" className="w-25 h-25 mt-0" /> {/* Create LogoCarousel.jsx in ui with GSAP */}
             </div>

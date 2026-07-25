@@ -3,6 +3,7 @@
 @theme {
   --breakpoint-2k: 2400px;
 }
+
 :root {
 
 }
@@ -17,7 +18,7 @@
 
 body {
   margin: 0;
-  padding: 0px 20%;
+
   background-color: #ffffff;
   color: var(--text);
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -38,7 +39,23 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center
-  
+}
+
+@media (min-width: 768px) {
+
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+
+}
+
+/* 2K and above (your previous request) */
+@media (min-width: 2400px) {
+  body{
+    padding: 0px 20%;
+  }
+
 }
 
 

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const NavBar = () => {
   return (
     <div className="fixed top-0 left-1/2 -translate-x-1/2 2k:w-170 w-[680px] font-sans  h-150px bg-gray-200/50 backdrop-blur-xl border-gray-200/60 rounded-full p-10px mt-7 font-semibold z-999">

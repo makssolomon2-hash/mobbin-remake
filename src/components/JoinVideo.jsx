@@ -1,19 +1,13 @@
 import React from 'react';
-
 import joinVideo from '../assets/video/video_hero.mp4';
 
 const JoinVideo = () => {
   return (
-    <section className="relative z-10 2k:-mt-500 lg:mt-30 flex justify-center items-center mb-20">
-        {/*<div className="test-fullhd text-8xl text-black opacity-0 md:opacity-100 z-50 ">
-            <p>You can see mee only on fullHD </p>
-        </div>
-        <div className="test-2k  text-8xl text-black opacity-0 2xl:opacity-100 z-50  ">
-            <p>You can see mee only on 2k </p>
-        </div>*/}
-      <div className="video-container 2k:-mt-130  p-[40px] bg-gray-200 rounded-3xl">
+    <section className="relative 2k:-top-110 z-10  lg:mt-60 flex justify-center items-center  mb-20">
+
+      <div className="video-container bg-none   bg-[#171717]/5   xl:-mt-50  rounded-3xl">
         <video
-          className="relative lg:w-full  p-15 h-250 object-cover rounded-3xl overflow-visible "
+          className="relative  lg:w-full   p-24 pb-0   h-250 object-cover xl:shadow-lg rounded-3xl "
           autoPlay
           muted
           loop

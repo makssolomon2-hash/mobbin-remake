@@ -4,7 +4,7 @@ import React from 'react';
 const NavBar = () => {
   return (
     <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[680px] font-sans  h-150px bg-gray-200/50 backdrop-blur-xl border-gray-200/60 rounded-full p-10px mt-7 font-medium z-999">
-      <nav className="relative z-2 flex items-center justify-between px-8 py-5">
+      <nav className=" z-2 flex items-center justify-between px-8 py-5">
         <span className="text-xl font-semibold text-black cursor-pointer">
           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="17" fill="none" overflow="visible">
             <path 

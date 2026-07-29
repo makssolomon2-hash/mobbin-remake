@@ -1,7 +1,7 @@
 import React from 'react';
 
 import logos from "../assets/asset3.png";
-import teams from "./ui/teams.png"
+import teams from "../assets/teams.png"
 
 const Hero = () => {
   return (

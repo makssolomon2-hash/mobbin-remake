@@ -14,18 +14,17 @@ import NavBar from './components/ui/NavBar';
 
 gsap.registerPlugin(useGSAP,ScrollTrigger,SplitText,TextPlugin);
 
-function App() {
+const App = () => {
  
-
-  return (
-    <>
+  return (  
+    <main>
       <HeroBackground/>
       <NavBar/>
       <Hero />
-      <JoinVideo/>
-    </>
-        
-  )
-}
+      <JoinVideo/> 
+    </main>
+       
+  );
+};
 
 export default App

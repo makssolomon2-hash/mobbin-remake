@@ -2,6 +2,7 @@
 
 @theme {
   --breakpoint-2k: 2400px;
+  --breakpoint-lap: 1024px;
 }
 
 :root {

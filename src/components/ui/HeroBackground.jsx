@@ -101,9 +101,9 @@ export default function HeroBackground() {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden bg-white">
+    <div className="absolute inset-0 overflow-hidden bg-white ">
       {/* Dot-grid canvas */}
-      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
+      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full " />
 
       {/* Gradient overlays */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(52%_40%_at_50%_50%,#ffffff_31.73%,rgba(255,255,255,0)_100%)]" />

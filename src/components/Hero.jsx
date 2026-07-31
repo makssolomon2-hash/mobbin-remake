@@ -20,7 +20,7 @@ const Hero = () => {
               Featuring over 1,000 iOS & Web apps, and 200 sites —New content weekly.
             </p>
 
-            <button className="rounded-full  m-5 p-3 px-7  bg-blue-500 text-white text-xl font-medium cursor-pointer">Join for free</button>
+            <button className="rounded-full  m-5 p-3 px-7  bg-black text-white text-xl font-normal cursor-pointer">Join for free</button>
             <button className="rounded-full p-3 px-7  bg-white text-black border text-xl font-medium cursor-pointer">See our plans →</button>
 
             <p className="mt-20 text-md font-medium">Trusted by design teams at</p>

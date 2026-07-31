@@ -18,8 +18,8 @@ const floatingImages = [
 const imgPositions = [
     {
         id: "p1",
-        left: 18,
-        top: 18,
+        left: 10,
+        top: 14,
         rotate: -10,
     },
     {
@@ -31,36 +31,36 @@ const imgPositions = [
     {
         id: "p3",
         left: 65,
-        top: 10,
+        top: 15,
         rotate: 5,
     },
     {
         id: "p4",
-        left: 82,
+        left: 102,
         top: 18,
         rotate: 10,
     },
     {
         id: "p5",
-        left: 12,
+        left: 5,
         top: 40,
         rotate: -8,
     },
     {
         id: "p6",
-        left: 88,
+        left: 95,
         top: 40,
         rotate: 8,
     },
     {
         id: "p7",
-        left: 8,
+        left: 3,
         top: 62,
         rotate: -12,
     },
     {
         id: "p8",
-        left: 25,
+        left: 15,
         top: 78,
         rotate: -6,
     },
@@ -72,19 +72,19 @@ const imgPositions = [
     },
     {
         id: "p10",
-        left: 58,
+        left: 65,
         top: 86,
         rotate: 2,
     },
     {
         id: "p11",
-        left: 75,
+        left: 85,
         top: 78,
         rotate: 6,
     },
     {
         id: "p12",
-        left: 92,
+        left: 100,
         top: 62,
         rotate: 12,
     },

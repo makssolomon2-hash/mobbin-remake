@@ -1,7 +1,10 @@
 import { floatingImages, imgPositions } from "../constants/index.js";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const FloatingIcons = () => {
     const orbitRef = useRef(null);
@@ -34,9 +37,9 @@ const FloatingIcons = () => {
     );
 
     return (
-        <section className="w-full px-[10%] py-24">
-            <div ref={orbitRef} className="relative mx-auto h-[600px] max-w-[1100px]">
-                <h2 className="content-h absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center text-2xl font-semibold text-black md:text-4xl">
+        <section id="floating-section" className=" w-full px-[10%] py-24">
+            <div ref={orbitRef} className="relative 2k:-top-110 mx-auto  h-screen max-w-[1100px]">
+                <h2 className="content-h absolute top-110 2k:top-110 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center text-md font-semibold text-black md:text-3xl">
                     A growing library of
                 </h2>
 
@@ -45,7 +48,7 @@ const FloatingIcons = () => {
                         key={image.id}
                         src={image.src}
                         alt={image.alt}
-                        className={`${image.id} absolute top-1/2 left-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-2xl object-cover shadow-sm md:h-20 md:w-20`}
+                        className={`${image.id} absolute top-110 left-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-2xl object-cover shadow-sm md:h-20 md:w-20`}
                     />
                 ))}
             </div>

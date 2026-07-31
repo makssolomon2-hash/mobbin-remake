@@ -3,11 +3,11 @@ import joinVideo from '../assets/video/video_hero.mp4';
 
 const JoinVideo = () => {
   return (
-    <section className="relative px-5  2k:-top-110 z-10  lg:mt-60 flex justify-center items-center  mb-20">
+    <section className="relative 2k:-top-110 z-10  lg:mt-60 flex justify-center items-center  mb-20">
 
-      <div className="video-container  bg-none   bg-[#171717]/5   xl:-mt-50  rounded-3xl">
+      <div className="video-container bg-none   bg-[#171717]/5   xl:-mt-50  rounded-3xl">
         <video
-          className="relative p-24 pb-0 lap:h-230   2k:h-250 object-cover xl:shadow-lg rounded-3xl "
+          className="relative  lg:w-full   p-24 pb-0   h-250 object-cover xl:shadow-lg rounded-3xl "
           autoPlay
           muted
           loop

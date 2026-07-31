@@ -21,10 +21,10 @@ const NavBar = () => {
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '#floating-section',
-        start: 'top 80%',
+        trigger: '#video-section',
+        start: 'bottom 90%',
         toggleActions: 'play none none reverse',
-        markers: true,
+        //markers: true,
       },
     });
 

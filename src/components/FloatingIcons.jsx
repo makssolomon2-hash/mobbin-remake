@@ -12,25 +12,52 @@ const FloatingIcons = () => {
     useGSAP(
         () => {
             const tl = gsap.timeline({
-                defaults: { duration: 2.4, ease: "power2.out", overwrite: "auto" },
+                defaults: { 
+                    duration: 2.4,
+                     ease: "power2.out",
+                      overwrite: "auto",                     
+                      //repeat: -1, 
+                      // yoyo: true 
+                     
+                    },
                 scrollTrigger: {
                     trigger: ".content-h",
                     start: "top 80%",
                     end: "center center",
-                    scrub: 1,
+                    //scrub: 1,
                     invalidateOnRefresh: true,
                 },
             });
 
-            imgPositions.forEach((item) => {
+            gsap.set(orbitRef.current.querySelectorAll('img'), { opacity: 0,  });
+
+            imgPositions.forEach((item, index) => {
                 const selector = `.${item.id}`;
                 const vars = {
                     left: `${item.left}%`,
                     top: `${item.top}%`,
+                    opacity: 1,
+                    duration:1.4,
+                    ease: "power3.out",
                 };
 
                 if (typeof item.rotate === "number") vars.rotate = item.rotate;
-                tl.to(selector, vars, 0);
+                tl.to(selector, vars, index * 0.05);
+            });
+
+            // after scatter completes, start independent infinite float per image
+            tl.eventCallback("onComplete", () => {
+                imgPositions.forEach((item, index) => {
+                    gsap.to(`.${item.id}`, {
+                        x: `random(-44, 54)`,
+                        y: `random(-38, 48)`,
+                        duration: gsap.utils.random(2.5, 4.5),
+                        ease: "sine.inOut",
+                        repeat: -1,
+                        yoyo: true,
+                        delay: index * 0.38,
+                    });
+                });
             });
         },
         { scope: orbitRef, dependencies: [] }

@@ -1,21 +1,20 @@
 import React from 'react';
-import HeroBackground from './ui/HeroBackground';
-
 import joinVideo from '../assets/video/video_hero.mp4';
 
 const JoinVideo = () => {
   return (
-    <section className="relative  z-10 -mt-60 flex justify-center items-center mb-20">
-      
-      <div className="video-container  p-[80px] bg-gray-200 rounded-3xl">
+    <section className="relative 2k:-top-110 z-10  lg:mt-60 flex justify-center items-center  mb-20">
+
+      <div className="video-container bg-none   bg-[#171717]/5   xl:-mt-50  rounded-3xl">
         <video
-          className="w-full h-[995px] object-cover rounded-3xl"
+          className="relative  lg:w-full   p-24 pb-0   h-250 object-cover xl:shadow-lg rounded-3xl "
           autoPlay
           muted
           loop
           playsInline
         >
-          <source src={joinVideo} type="video/mp4" />
+
+          <source src={joinVideo} type="video/mp4" className="relative p-200 w-[50%] h-300 object-cover rounded-3xl overflow-visible " />
         </video>
       </div>
     </section>

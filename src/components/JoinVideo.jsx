@@ -7,7 +7,7 @@ const JoinVideo = () => {
 
       <div className="video-container bg-none   bg-[#171717]/5   xl:-mt-50  rounded-3xl">
         <video
-          className="relative  lg:w-full   p-24 pb-0   h-250 object-cover xl:shadow-lg rounded-3xl "
+          className="relative  lg:w-full  lap:h-230 p-24 pb-0   h-250 object-cover xl:shadow-lg rounded-3xl "
           autoPlay
           muted
           loop

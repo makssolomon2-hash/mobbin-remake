@@ -50,7 +50,7 @@ const NavBar = () => {
 
   return (
     <div ref={navRef} className="fixed top-0 left-1/2 -translate-x-1/2 2k:w-170 w-[680px] font-sans  h-150px bg-gray-200/50 backdrop-blur-xl border-gray-200/60 rounded-full p-10px mt-7 font-semibold z-999">
-      <nav className=" z-2 flex items-center justify-between px-0 py-4.5">
+      <nav className=" z-2 flex items-center justify-between px-3 py-4.5">
         <span className="text-xl  font-semibold text-black cursor-pointer px-5">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="20" fill="none" overflow="visible">
             <path 

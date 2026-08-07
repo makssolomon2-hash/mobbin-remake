@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css';
-import asset15 from '../assets/asset 15.png';
+import {scrollImages} from "../constants/index.js";
 
 
 const InfiniteScroll = () => {
@@ -16,95 +16,22 @@ const InfiniteScroll = () => {
                     <button className="text-gray-400">Text in Screenshots</button>
                 </nav>
             </div>
-            <div className=" w-full overflow-x-auto overflow-y-auto flex flex-nowrap gap-6 px-4 scrollbar-hide    ">
-                <div className=" loop-el mt-10">
-                    <h2 className="font-bold text-lg">Welcome</h2>
-                    <img src={asset15} alt=""
-                         className="h-[600px]  w-auto rounded-2xl shadow-lg object-cover flex-shrink-0 scrollbar-hide object-contain "
-                         style={{
-                             flexShrink: 0,   // ← prevents shrinking
-                             maxWidth: "none", // ← prevents browser from forcing smaller size
-                             objectFit: 'contain'
-                         }}
-                    />
-                </div>
-                <div className=" loop-el mt-10">
-                    <h2 className="font-bold text-lg">Welcome</h2>
-                    <img src={asset15} alt=""
-                         className="h-[600px]  w-auto rounded-2xl shadow-lg object-cover flex-shrink-0 scrollbar-hide object-contain "
-                         style={{
-                             flexShrink: 0,   // ← prevents shrinking
-                             maxWidth: "none", // ← prevents browser from forcing smaller size
-                             objectFit: 'contain'
-                         }}
-                    />
-                </div>
-                <div className=" loop-el mt-10">
-                    <h2 className="font-bold text-lg">Welcome</h2>
-                    <img src={asset15} alt=""
-                         className="h-[600px]  w-auto rounded-2xl shadow-lg object-cover flex-shrink-0 scrollbar-hide object-contain "
-                         style={{
-                             flexShrink: 0,   // ← prevents shrinking
-                             maxWidth: "none", // ← prevents browser from forcing smaller size
-                             objectFit: 'contain'
-                         }}
-                    />
-                </div>
-                <div className=" loop-el mt-10">
-                    <h2 className="font-bold text-lg">Welcome</h2>
-                    <img src={asset15} alt=""
-                         className="h-[600px]  w-auto rounded-2xl shadow-lg object-cover flex-shrink-0 scrollbar-hide object-contain "
-                         style={{
-                             flexShrink: 0,   // ← prevents shrinking
-                             maxWidth: "none", // ← prevents browser from forcing smaller size
-                             objectFit: 'contain'
-                         }}
-                    />
-                </div>
-                <div className=" loop-el mt-10">
-                    <h2 className="font-bold text-lg">Welcome</h2>
-                    <img src={asset15} alt=""
-                         className="h-[600px]  w-auto rounded-2xl shadow-lg object-cover flex-shrink-0 scrollbar-hide object-contain "
-                         style={{
-                             flexShrink: 0,   // ← prevents shrinking
-                             maxWidth: "none", // ← prevents browser from forcing smaller size
-                             objectFit: 'contain'
-                         }}
-                    />
-                </div>
-                <div className=" loop-el mt-10">
-                    <h2 className="font-bold text-lg">Welcome</h2>
-                    <img src={asset15} alt=""
-                         className="h-[600px]  w-auto rounded-2xl shadow-lg object-cover flex-shrink-0 scrollbar-hide object-contain "
-                         style={{
-                             flexShrink: 0,   // ← prevents shrinking
-                             maxWidth: "none", // ← prevents browser from forcing smaller size
-                             objectFit: 'contain'
-                         }}
-                    />
-                </div>
-                <div className=" loop-el mt-10">
-                    <h2 className="font-bold text-lg">Welcome</h2>
-                    <img src={asset15} alt=""
-                         className="h-[600px]  w-auto rounded-2xl shadow-lg object-cover flex-shrink-0 scrollbar-hide object-contain "
-                         style={{
-                             flexShrink: 0,   // ← prevents shrinking
-                             maxWidth: "none", // ← prevents browser from forcing smaller size
-                             objectFit: 'contain'
-                         }}
-                    />
-                </div>
-                <div className=" loop-el mt-10">
-                    <h2 className="font-bold text-lg">Welcome</h2>
-                    <img src={asset15} alt=""
-                         className="h-[600px]  w-auto rounded-2xl shadow-lg object-cover flex-shrink-0 scrollbar-hide object-contain "
-                         style={{
-                             flexShrink: 0,   // ← prevents shrinking
-                             maxWidth: "none", // ← prevents browser from forcing smaller size
-                             objectFit: 'contain'
-                         }}
-                    />
-                </div>
+            <div className=" w-full overflow-x-auto overflow-y-auto flex flex-nowrap gap-6 px-4 scrollbar-hide">
+                    <div className="flex flex-nowrap gap-6 px-4" style={{ height: "600px" }}>
+                        {scrollImages.map((image) => (
+                            <div className="h-[100%] flex flex-col items-center flex-shrink-0">
+                                <h2 className="font-semibold text-lg mb-5" >{image.h2}</h2>
+                                <img
+                                    key={image.index}
+                                    src={image.src}
+                                    alt={`Screenshot ${image.index + 1}`}
+                                    className="h-full w-auto rounded-4xl shadow-lg object-cover"
+                                    style={{ flexShrink: 0, maxWidth: "none" }}
+                                />
+                            </div>
+
+                        ))}
+                    </div>
             </div>
             <div className="mt-50">
                 <h1>Welcome</h1>

@@ -90,7 +90,21 @@ const imgPositions = [
     },
 ];
 
+const scrollImages = [
+    { id: "id1", src: asset("asset 14.png"), alt: "icon 1", h2: 'Welcome' },
+    { id: "id2", src: asset("asset 13.png"), alt: "icon 2", h2: 'Welcome' },
+    { id: "id3", src: asset("asset 15.png"), alt: "icon 3", h2: 'Welcome' },
+    { id: "id4", src: asset("asset 16.png"), alt: "icon 4", h2: 'Welcome' },
+    { id: "id5", src: asset("asset 17.png"), alt: "icon 5", h2: 'Welcome' },
+    { id: "id6", src: asset("asset 18.png"), alt: "icon 6", h2: 'Welcome' },
+    { id: "id7", src: asset("asset 19.png"), alt: "icon 7", h2: 'Welcome' },
+    { id: "id8", src: asset("asset 20.png"), alt: "icon 8", h2: 'Welcome' },
+    { id: "id9", src: asset("asset 21.png"), alt: "icon 9", h2: 'Welcome' },
+    { id: "id10", src: asset("asset 22.png"), alt: "icon 10", h2: 'Welcome' },
+];
+
 export {
     floatingImages,
     imgPositions,
+    scrollImages,
 }

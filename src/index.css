@@ -11,11 +11,29 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #fdfdff;
+    --text: #000000;
     --text-h: #f3f4f6;
     --bg: #16171d;
   }
 }
+
+@media (min-width: 768px) {
+
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+
+}
+
+/* 2K and above (your previous request) */
+@media (min-width: 2400px) {
+  body{
+    padding: 0px 20%;
+  }
+
+}
+
 
 body {
   margin: 0;
@@ -42,28 +60,18 @@ body {
   justify-content: center
 }
 
-/**, body{
-  background-color: #000;
-  color: #f3f4f6;
-}*/
-
-@media (min-width: 768px) {
-
+.inf-nav button {
+  @apply cursor-pointer  ;
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
-
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-/* 2K and above (your previous request) */
-@media (min-width: 2400px) {
-  body{
-    padding: 0px 20%;
-  }
-
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
-
 
 
 

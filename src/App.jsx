@@ -12,6 +12,7 @@ import { TextPlugin } from "gsap/TextPlugin";
 import JoinVideo from './components/JoinVideo';
 import NavBar from './components/ui/NavBar';
 import FloatingIcons from "./components/FloatingIcons.jsx";
+import InfiniteScroll from "./components/InfiniteScroll.jsx";
 
 gsap.registerPlugin(useGSAP,ScrollTrigger,SplitText,TextPlugin);
 
@@ -25,6 +26,7 @@ function App() {
       <Hero />
       <JoinVideo/>
       <FloatingIcons/>
+      <InfiniteScroll/>
     </>
         
   )

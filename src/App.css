@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+
+
+@theme {
+ --breakpoint-2k: 2400px;
+}
+
  a{
   cursor: pointer;
 }

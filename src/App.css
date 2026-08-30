@@ -8,3 +8,21 @@
   --breakpoint-2k: 2400px;
 }
 
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 80s linear infinite;
+}
+
+/* Optional: pause on hover */
+/* .animate-infinite-scroll:hover {
+  animation-play-state: paused;
+} */

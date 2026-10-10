@@ -1,11 +1,9 @@
-import React from 'react';
-
 import logos from "../assets/asset3.png";
 import teams from "./ui/teams.png"
 
 const Hero = () => {
   return (
-    <section className="relative   w-full h-screen center justify-center text-center align-center overflow-hidden xl:-mt-0 ">
+    <section id="top" className="relative   w-full h-screen center justify-center text-center align-center overflow-hidden xl:-mt-0 ">
       {/* Everything here sits above the background */}
       <div className="relative z-10 flex  flex-col h-full">
        {/*  <NavBar /> */}

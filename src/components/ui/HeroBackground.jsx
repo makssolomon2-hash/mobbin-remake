@@ -101,7 +101,7 @@ export default function HeroBackground() {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden bg-white ">
+    <div className="absolute inset-x-0 top-0 -z-10 h-screen overflow-hidden bg-white ">
       {/* Dot-grid canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full " />
 

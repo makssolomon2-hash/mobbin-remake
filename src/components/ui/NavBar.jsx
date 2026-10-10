@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const NavBar = () => {
+const NavBar = ({ footerRevealRef }) => {
   const navRef = useRef(null);
   const joinBtnRef = useRef(null);
   const joinLiRef = useRef(null);
@@ -13,7 +13,6 @@ const NavBar = () => {
   useGSAP(() => {
     // measure before hiding so we can animate back to exact natural width
     const btnNaturalWidth = joinLiRef.current.offsetWidth;
-    const gap = 32; // gap-8 = 2rem at 16px base
 
     gsap.set(navRef.current, { width: 620 });
     gsap.set(joinLiRef.current, { width: 0,  scale: 0,});
@@ -30,7 +29,7 @@ const NavBar = () => {
 
     tl.to(navRef.current, {
       width: 620,
-      duration: 0.5,
+      duration: 0.1,
       ease: 'power2.inOut',
     })
     .to(joinLiRef.current, {
@@ -46,6 +45,19 @@ const NavBar = () => {
       duration: 0.35,
       ease: 'back.out(1.7)',
     }, '-=0.2');
+
+    /* gsap.to(navRef.current, {
+      yPercent: -140,
+      autoAlpha: 0,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: footerRevealRef.current,
+        start: 'top bottom',
+        end: 'bottom bottom',
+        scrub: true,
+        invalidateOnRefresh: true,
+      },
+    }); */
   }, { dependencies: [] });
 
   return (

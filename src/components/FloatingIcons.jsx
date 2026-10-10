@@ -65,10 +65,12 @@ const FloatingIcons = () => {
 
     return (
         <section id="floating-section" className=" w-full px-[10%] py-24">
-            <div ref={orbitRef} className="relative 2k:-top-110 mx-auto  h-screen max-w-[1100px]">
-                <h2 className="content-h absolute lap:top-40 lap:text-2xl 2k:top-110 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center text-md font-semibold text-black md:text-3xl">
+            <div ref={orbitRef} className="relative 2k:-top-110  mx-auto  h-screen max-w-[1100px]">
+                <h2 className="content-h absolute fhd:top-100 lap:top-40 lap:text-2xl 2k:top-110 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center text-md font-semibold text-black md:text-3xl">
                     A growing library of
                 </h2>
+
+                <h1 className=" absolute text-6xl fhd:top-130 lap:top-40  2k:top-110 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center text-md font-extrabold text-black " >Trusted by teams that build world-class apps.</h1>
 
                 {floatingImages.map((image) => (
                     <img

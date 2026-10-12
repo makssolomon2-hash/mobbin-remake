@@ -1,11 +1,10 @@
-import React from 'react';
 import joinVideo from '../assets/video/video_hero.mp4';
 
 const JoinVideo = () => {
   return (
     <section id="video-section" className="relative 2k:-top-110 z-10  lg:mt-60 flex justify-center items-center  mb-20">
 
-      <div className="video-container bg-none   bg-[#171717]/5   xl:-mt-50  rounded-3xl">
+      <div className="video-container bg-none   bg-[#171717]/5   xl:-mt-50  rounded-3xl" data-reveal="scale">
         <video
           className="relative  lg:w-full  lap:h-230 p-24 pb-0   h-250 object-cover xl:shadow-lg rounded-3xl "
           autoPlay

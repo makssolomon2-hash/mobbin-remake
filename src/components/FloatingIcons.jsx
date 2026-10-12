@@ -7,10 +7,38 @@ import { useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 const FloatingIcons = () => {
+    const sectionRef = useRef(null);
     const orbitRef = useRef(null);
 
     useGSAP(
         () => {
+            const phrases = gsap.utils.toArray("[data-story-phrase]", orbitRef.current);
+            const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            if (prefersReducedMotion) {
+                gsap.set(phrases, { autoAlpha: 0, y: 0 });
+                gsap.set(phrases[0], { autoAlpha: 1 });
+            } else {
+                gsap.set(phrases, { autoAlpha: 0, y: 36 });
+
+                const story = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 0.8,
+                        invalidateOnRefresh: true,
+                    },
+                });
+
+                phrases.forEach((phrase) => {
+                    story
+                        .to(phrase, { autoAlpha: 1, y: 0, duration: 0.75, ease: "power3.out" })
+                        .to(phrase, { autoAlpha: 1, duration: 0.75, ease: "none" })
+                        .to(phrase, { autoAlpha: 0, y: -24, duration: 0.35, ease: "power2.in" });
+                });
+            }
+
             const tl = gsap.timeline({
                 defaults: { 
                     duration: 2.4,
@@ -23,8 +51,8 @@ const FloatingIcons = () => {
                 scrollTrigger: {
                     trigger: ".content-h",
                     start: "top 80%",
-                    end: "center center",
-                    //scrub: 1,
+                    once: true,
+                    toggleActions: "play none none none",
                     invalidateOnRefresh: true,
                 },
             });
@@ -60,17 +88,31 @@ const FloatingIcons = () => {
                 });
             });
         },
-        { scope: orbitRef, dependencies: [] }
+        { scope: sectionRef, dependencies: [] }
     );
 
     return (
-        <section id="floating-section" className=" w-full px-[10%] py-24">
-            <div ref={orbitRef} className="relative 2k:-top-110  mx-auto  h-screen max-w-[1100px]">
-                <h2 className="content-h absolute fhd:top-100 lap:top-40 lap:text-2xl 2k:top-110 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center text-md font-semibold text-black md:text-3xl">
+        <section
+            ref={sectionRef}
+            id="floating-section"
+            className="relative h-[300vh] w-full px-[10%] motion-reduce:h-screen"
+        >
+            <div ref={orbitRef} className="sticky top-0 mx-auto h-screen max-w-[1100px] motion-reduce:static">
+                <h2 data-reveal className="content-h absolute left-1/2 top-[20%] z-10 -translate-x-1/2 -translate-y-1/2 text-center text-xl font-semibold text-black md:text-3xl">
                     A growing library of
                 </h2>
 
-                <h1 className=" absolute text-6xl fhd:top-130 lap:top-40  2k:top-110 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-center text-md font-extrabold text-black " >Trusted by teams that build world-class apps.</h1>
+                <div className="absolute left-1/2 top-1/2 z-10 w-[min(100%,58rem)] -translate-x-1/2 -translate-y-1/2 px-4 text-center">
+                    <h1 data-story-phrase className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 text-[clamp(2.5rem,6vw,5.5rem)] font-extrabold leading-[0.98] tracking-[-0.055em] text-black">
+                        Trusted by teams that build world-class apps.
+                    </h1>
+                    <h2 data-story-phrase className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 text-[clamp(1.5rem,3vw,2.5rem)] font-bold leading-[1.15] tracking-[-0.03em] text-[#707070]">
+                        Find the patterns behind great products.
+                    </h2>
+                    <h2 data-story-phrase className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 text-[clamp(1.5rem,3vw,2.5rem)] font-extrabold leading-[1.15] tracking-[-0.03em] text-[#707070]">
+                        Turn inspiration into what’s next.
+                    </h2>
+                </div>
 
                 {floatingImages.map((image) => (
                     <img

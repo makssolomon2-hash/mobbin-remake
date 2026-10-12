@@ -1,4 +1,3 @@
-import React from 'react'
 import '../App.css';
 import { scrollImages } from "../constants/index.js";
 
@@ -6,12 +5,12 @@ const InfiniteScroll = () => {
     return (
         <section className="infinite-scroll h-full w-full  flex flex-col items-center text-center overflow-hidden">
             <div className="text-center mt-30 w-full">
-                <h1 className="text-6xl w-1/3 mx-auto font-extrabold text-black">
+                <h1 data-reveal className="text-6xl w-1/3 mx-auto font-extrabold text-black">
                     Find design patterns in seconds.
                 </h1>
 
                 {/*ADD MAP FOR LINKS TOO - !!!*/}
-                <nav className="inf-nav relative top-20 mb-20 w-1/3 2k:w-[20%] mx-auto flex items-center justify-between
+                <nav data-reveal="scale" className="inf-nav relative top-20 mb-20 w-1/3 2k:w-[20%] mx-auto flex items-center justify-between
                  text-black text-[1.1rem] font-semibold mt-10 px-1.5 py-1 bg-gray-100 rounded-full">
                     <button className="bg-white p-1 rounded-full px-4">Screens</button>
                     <button className="text-gray-400">UI Elements</button>
@@ -57,8 +56,8 @@ const InfiniteScroll = () => {
                 </div>
             </div>
 
-            <div className="mt-60">
-                <h1 className="text-5xl  w-150 mx-auto font-extrabold text-gray">Trusted by teams that build world-class apps.</h1>
+            <div className="mt-60" data-reveal>
+                <h1 className="text-2xl  w-150 mx-auto font-bold text-gray-700">Trusted by teams that build world-class apps.</h1>
             </div>
         </section>
     )

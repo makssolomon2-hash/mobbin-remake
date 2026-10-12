@@ -37,35 +37,41 @@ const footerLinks = [
 
 const Footer = ({ revealTriggerRef }) => {
   const footerRef = useRef(null);
+  const footerContentRef = useRef(null);
+  const footerMetaRef = useRef(null);
   const lettersRef = useRef([]);
 
   useGSAP(() => {
-    gsap.fromTo(
-      lettersRef.current,
-      { yPercent: 110, opacity: 0 },
-      {
-        yPercent: 0,
-        opacity: 1,
-        duration: 1,
-        stagger: 0.12,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: revealTriggerRef.current,
-          start: 'top bottom',
-          end: 'bottom bottom',
-          scrub: true,
-          invalidateOnRefresh: true,
-        },
-      },
-    );
+    const entrance = gsap.timeline({ paused: true });
+
+    entrance
+      .fromTo(
+        [footerContentRef.current, footerMetaRef.current],
+        { y: 24, autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, duration: 0.7, stagger: 0.12, ease: 'power3.out' },
+      )
+      .fromTo(
+        lettersRef.current,
+        { yPercent: 110, opacity: 0 },
+        { yPercent: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: 'power3.out' },
+        0.15,
+      );
+
+    ScrollTrigger.create({
+      trigger: revealTriggerRef.current,
+      start: 'top 85%',
+      onEnter: () => entrance.play(),
+      onLeaveBack: () => entrance.reverse(),
+      invalidateOnRefresh: true,
+    });
   }, { scope: footerRef });
 
   return (
     <footer
       ref={footerRef}
-      className="fixed bottom-0 z-0 h-screen w-full overflow-hidden bg-[#141414] text-white"
+      className="fixed bottom-0  z-0 h-screen w-full overflow-hidden bg-[#141414] text-white"
     >
-      <div className="relative z-10 mx-auto grid w-[68%] max-w-[70rem] grid-cols-1 gap-10 pt-[12vh] sm:grid-cols-2 sm:gap-0">
+      <div ref={footerContentRef} className="footer-content relative z-10 mx-auto grid w-[68%] max-w-[70rem] grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-0">
         <a href="#top" className="w-fit text-[clamp(14px,2.4vh,20px)] font-semibold tracking-tight">
           Mobbin
         </a>
@@ -93,7 +99,7 @@ const Footer = ({ revealTriggerRef }) => {
         </nav>
       </div>
 
-      <div className="relative z-10 mx-auto mt-[13vh] flex w-[68%] max-w-[70rem] flex-col gap-6 text-[clamp(9px,1.5vh,12px)] text-white/55 sm:flex-row sm:items-center sm:justify-between">
+      <div ref={footerMetaRef} className="footer-meta relative z-10 mx-auto flex w-[68%] max-w-[70rem] flex-col gap-6 text-[clamp(9px,1.5vh,12px)] text-white/55 sm:flex-row sm:items-center sm:justify-between">
         <p>© Mobbin 2018–{new Date().getFullYear()}.</p>
         <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
           <a href="#mcp-info" className="transition-colors hover:text-white">Privacy</a>

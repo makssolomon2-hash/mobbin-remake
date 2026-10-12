@@ -1,3 +1,4 @@
+
 <img width="1280" height="720" alt="mobbin-gif" src="https://github.com/user-attachments/assets/a8a73a98-a8b7-474f-996a-c0d73b65d9b6" />
 
 ﻿# Mobbin Remake
@@ -115,6 +116,8 @@ mobbin-remake/
 ## Media
 
 <img width="2560" height="1440" alt="Screenshot 2026-10-12 195936" src="https://github.com/user-attachments/assets/7ed16dde-b67f-4a37-bd2d-a79a17ecfab6" />
+<img width="2560" height="1440" alt="Screenshot 2026-10-12 195953" src="https://github.com/user-attachments/assets/e8708759-2c4a-4756-833a-6281b3981a19" />
+<img width="2560" height="1440" alt="Screenshot 2026-10-12 195946" src="https://github.com/user-attachments/assets/e7a7c1f0-85f6-414d-b3ab-9c1c1cfaf3d9" />
 <img width="2560" height="1440" alt="Screenshot 2026-10-12 195957" src="https://github.com/user-attachments/assets/7596ae5e-61be-481f-94c8-b7b634f5ba6a" />
 
 ## License

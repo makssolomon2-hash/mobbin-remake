@@ -1,6 +1,5 @@
 <img width="1280" height="720" alt="mobbin-gif" src="https://github.com/user-attachments/assets/a8a73a98-a8b7-474f-996a-c0d73b65d9b6" />
-<img width="2560" height="1440" alt="Screenshot 2026-10-12 195936" src="https://github.com/user-attachments/assets/7ed16dde-b67f-4a37-bd2d-a79a17ecfab6" />
-<img width="2560" height="1440" alt="Screenshot 2026-10-12 195957" src="https://github.com/user-attachments/assets/7596ae5e-61be-481f-94c8-b7b634f5ba6a" />
+
 ﻿# Mobbin Remake
 
 A frontend recreation of the [Mobbin](https://mobbin.com) marketing/landing experience — the popular UI & UX design reference library.
@@ -112,6 +111,11 @@ mobbin-remake/
 - This is an **unofficial fan remake** for learning and portfolio purposes. It is not affiliated with or endorsed by [Mobbin](https://mobbin.com).
 - Some sections and interactions are still works in progress (see `src/ref/` for design references).
 - Large image assets live under `src/assets/`.
+
+## Media
+
+<img width="2560" height="1440" alt="Screenshot 2026-10-12 195936" src="https://github.com/user-attachments/assets/7ed16dde-b67f-4a37-bd2d-a79a17ecfab6" />
+<img width="2560" height="1440" alt="Screenshot 2026-10-12 195957" src="https://github.com/user-attachments/assets/7596ae5e-61be-481f-94c8-b7b634f5ba6a" />
 
 ## License
 

@@ -1,8 +1,6 @@
+## Mobbin Remake
 
-<img width="1280" height="720" alt="mobbin-gif" src="https://github.com/user-attachments/assets/a8a73a98-a8b7-474f-996a-c0d73b65d9b6" />
-
-﻿# Mobbin Remake
-
+<img width="1280" height="720" alt="mobbin-gif" src="https://github.com/user-attachments/assets/a8a73a98-a8b7-474f-996a-c0d73b65d9b6"/>
 A frontend recreation of the [Mobbin](https://mobbin.com) marketing/landing experience — the popular UI & UX design reference library.
 
 Built as a practice / portfolio project to study modern landing-page patterns, scroll-driven animation, and interactive backgrounds.
